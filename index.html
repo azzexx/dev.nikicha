@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html  >
+<head>
+    <!-- Site made by Nikicha Cyber  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>Nikicha Cyber</title>
+    <meta name="author" content="Nikicha Cyber">
+    <meta name="description" content="Nikicha Cyber Development">
+    <meta data-react-helmet="true" name="description" content="Официялен сайт на Nikicha Cyber ">
+    <meta name="theme-color" content="#232323">
+
+    <!-- Og:Meta Tags -->
+    <meta property="og:site_name" content="Nikicha Cyber Development" />
+    <meta data-react-helmet="true" property="og:image" content="https://www.nikichacyber.repl.co/image.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />   
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link href="./pointer.css" rel="stylesheet">
+</head>
+
+ <!-- Website Protect -->
+<style type="text/css">
+  img {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+  }
+</style>
+  
+<script id="wpcp_disable_Right_Click" type="text/javascript">
+  document.ondragstart = function() { return false;}
+      function nocontext(e) {
+         return false;
+      }
+      document.oncontextmenu = nocontext;
+
+window.addEventListener("keydown",function(e){
+    if(e.ctrlKey&&(e.which==65||e.which==66||e.which==67||e.which==70||e.which==73||e.which==80||e.which==83||e.which==85||e.which==86))      {e.preventDefault()}
+});
+document.keypress=function(e){
+    if(e.ctrlKey&&(e.which==65||e.which==66||e.which==70||e.which==67||e.which==73||e.which==80||e.which==83||e.which==85||e.which==86)){}
+    return false;
+}
+
+document.onkeydown=function(e){
+    e=e||window.event;
+    if(e.keyCode==123||e.keyCode==18){return false}
+}
+
+       document.onclick = hideMenu; 
+       document.oncontextmenu = rightClick; 
+
+        function hideMenu() { 
+            document.getElementById("contextMenu") 
+                    .style.display = "none" 
+        } 
+
+        function rightClick(e) { 
+            e.preventDefault(); 
+
+            if (document.getElementById("contextMenu") .style.display == "block"){ 
+                hideMenu(); 
+            }else{ 
+                var menu = document.getElementById("contextMenu")      
+                menu.style.display = 'block'; 
+                menu.style.left = e.pageX + "px"; 
+                menu.style.top = e.pageY + "px"; 
+            } 
+        } 
+</script>
+<!-- End Website Protect -->
+  
+<body style="cursor: default;">
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker__item">Web Flow Developer,</div>
+    <div class="ticker__item">Front End Developer,</div>
+    <div class="ticker__item">Back End Developer,</div>
+    <div class="ticker__item">Dull Stack Developer</div>
+  </div>
+</div>
+
+<style>
+* {
+	 box-sizing: border-box;
+}
+ @-webkit-keyframes ticker {
+	 0% {
+		 -webkit-transform: translate3d(0, 0, 0);
+		 transform: translate3d(0, 0, 0);
+		 visibility: visible;
+	}
+	 100% {
+		 -webkit-transform: translate3d(-100%, 0, 0);
+		 transform: translate3d(-100%, 0, 0);
+	}
+}
+ @keyframes ticker {
+	 0% {
+		 -webkit-transform: translate3d(0, 0, 0);
+		 transform: translate3d(0, 0, 0);
+		 visibility: visible;
+	}
+	 100% {
+		 -webkit-transform: translate3d(-100%, 0, 0);
+		 transform: translate3d(-100%, 0, 0);
+	}
+}
+ .ticker-wrap {
+   text-align: center;
+   font-family: 'Noto Sans JP', sans-serif;
+	 overflow: hidden;
+	 background-color: white;
+	 box-sizing: content-box;
+   border-bottom: 1px solid black;
+   padding-left: 100%;
+   width: 100%;
+   
+}
+ .ticker-wrap .ticker {
+	 display: inline-block;
+	 white-space: nowrap;
+	 box-sizing: content-box;
+   padding-right: 100%;
+   
+	 -webkit-animation-iteration-count: infinite;
+	 animation-iteration-count: infinite;
+	 -webkit-animation-timing-function: linear;
+	 animation-timing-function: linear;
+	 -webkit-animation-name: ticker;
+	 animation-name: ticker;
+	 -webkit-animation-duration: 20s;
+	 animation-duration: 20s;
+}
+ .ticker-wrap .ticker__item {
+	 display: inline-block;
+	 color: black;
+}
+</style>
+    <script src="./pointer.js"></script>
+    <script>
+        init_pointer({
+            
+        })
+    </script>
+
+    <a title="Discord Server" class="discord" target="blank" href="https://discord.gg/m6hHF8TuaM"><i class="bi bi-discord"></i></a>
+  
+<style>
+
+.discord {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
+    background-color: transparent;
+    color: #232323;
+    cursor: pointer;
+    padding: 15px 19px;
+    border-radius: 50%;
+    border: 1px solid #232323;
+    backdrop-filter: blur(7px);
+    transition: 0.3s;
+}
+  
+.discord:hover {
+    box-shadow: 0px 0px 17px #232323;
+}
+</style>
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-t2I9LBTnrv" once="menu" id="menu2-2">
+    
+<nav class="navbar navbar-dropdown navbar-fixed-top collapsed" style="background: transparent;">
+        <div class="container-fluid" style="cursor: default;">
+           <div class="navbar-brand">
+                
+                
+            </div>
+            <button style="margin-top: 2cm;" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="cursor: default;">
+                <ul class="navbar-nav nav-dropdown nav-right navbar-nav-top-padding" data-app-modern-menu="true">
+                  <li class="nav-item">
+                    <a class="navbtn nav-link link text-black display-4" href="#capabilities">
+                       <i class="bi bi-link-45deg" style="margin-right: 3px;"> </i> Capabilities
+                    </a>
+                  </li>
+                    
+                  <li class="nav-item">
+                    <a class="navbtn nav-link link text-black display-4" href="#contacts">
+                       <i class="bi bi-share" style="margin-right: 3px;"> </i> Contacts 
+                    </a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="navbtn nav-link link text-black display-4" target="blank" href="https://discord.gg/m6hHF8TuaM">
+                      <i class="bi bi-box-arrow-up-right" style="margin-right: 3px;"> </i> Discord
+                    </a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </section>
+
+  
+<style>
+.navbtn {
+  border-bottom: 1px solid white;
+  transition: 0.3s;
+}
+.navbtn:hover {
+  border-bottom: 1px solid #232323;
+}
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {background: transparent; }
+::-webkit-scrollbar-thumb {background: #232323; border-radius: 14px; border: 2px solid white; background-clip: content-box;cursor:grab;}
+::selection {color: white;background-color: #232323; }
+.bordered-text::selection {color: white; background: #232323; -webkit-text-stroke: 1px white;}
+.bordered-text {display: inline; -webkit-text-stroke: 1px #232323; color: white;}
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block;}
+::-webkit-scrollbar-button:vertical:start:increment,::-webkit-scrollbar-button:vertical:end:decrement {display: none;}
+::-webkit-scrollbar-button:vertical:increment {background-color: #232323;border-radius: 14px;border: 2px solid white;}
+::-webkit-scrollbar-button:vertical:decrement {background-color: #232323;border-radius: 14px;border: 2px solid white;}
+::-webkit-scrollbar-track-piece {background-color: white;}
+::-webkit-scrollbar-thumb:vertical {height: 50px;background-color: #232323;border-radius: 14px; border: 2px solid white; background-clip: content-box;}
+body {overflow: -moz-scrollbars-vertical;overflow-x: hidden;overflow-y: auto;}
+html, body {-ms-content-zooming:none;  touch-action: none;content-zooming: none;overflow-x: hidden; overflow-x: none; }
+  
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.area {}
+</style>
+<section data-bs-version="5.1" class="header10 cid-t2IhcbVbx3 mbr-fullscreen mbr-parallax-background" style="z-index: 0; position: relative;border: 20px solid white;" id="header10-c">
+    <div class="mbr-overlay"  style="opacity: 0.6; background-color: rgb(250, 250, 250);border-radius: 17px;box-shadow: 0px 0px 17px 0px black;border: 1px solid black;"></div>
+
+<div id="particles-js"></div>
+  
+    <div class="align-center container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-9">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1">
+                  <strong>
+                    <div class="bordered-text">N</div>ikicha <div class="bordered-text">C</div>yber<br></strong></h1>
+                <p class="mbr-text mbr-fonts-style display-7"><strong>Have fun your creating
+                    </strong><br>I’m ready to design your website and build it with
+                            <br>Visual Studio Code and Html or Java Script.<br>
+                            <br>Completed 60+ projects as a Html and Java Script Expert that helped my clients drive more leads, sell more products, and convert more traffic.<br><br>
+                Inspect Code Protected by Nikicha Cyber JS Skills</p>
+                <div class="mbr-section-btn mt-3">
+                  <a href="#more" class="btn btn-white display-4">↓</a> 
+<style>                    
+.closebtn {
+  
+  color: #7a7a7a;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+
+<div class="btn btn-white display-4">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong class="mbr-text mbr-fonts-style display-7">Attention! The site is still under development.</strong>
+</div>
+                
+                </div>
+                <div class="image-wrap mt-4">
+                    <img src="assets/images/vscode-dev.png" alt="Image" title="" class="animate__animated animate__delay-1s animate__fadeInUp" style="border-radius: 10px;box-shadow: 0px 0px 17px black;border: 1px solid #b1b1b1;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content6 cid-t2IaN3soXG" id="content6-4">
+    
+    <div id="more" class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <hr class="line">
+                <p class="mbr-text align-center mbr-fonts-style my-4 display-5"><em>Professional web flow developer.</em><br></p>
+                <hr class="line">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content4 cid-t2IbMKTupP mbr-parallax-background" id="content4-7">
+    
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(250, 250, 250);">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-md-12 col-lg-12">
+                <h3 id="capabilities" class="mbr-section-title mbr-fonts-style align-center mb-4 display-1"><strong><div style="display: inline; -webkit-text-stroke: 1px #232323; color: transparent;">C</div>apabilities</strong></h3>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image2 cid-t2IbgcxXXw mbr-parallax-background" id="image2-5">
+
+  <div id="particles-js"></div>
+
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(250, 250, 250);">
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-4">
+                <div class="image-wrapper">
+                    <img style="border-radius: 10px;
+    box-shadow: 0px 0px 17px black;
+    border: 1px solid #b1b1b1;" src="assets/images/image-46.png" alt="Image">
+                    
+                </div>
+            </div>
+            <div class="col-12 col-lg">
+                <div class="text-wrapper">
+                    <h3 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Web flow development</strong></h3>
+                    <p class="mbr-text mbr-fonts-style display-7"><strong>Your success will begin with a fully functional website<br></strong> 
+<br> As a web flow Expert, I build your website with all the features you need. I make sure that your website   performs well on all devices.
+<br>
+<br> If you are not familiar with web flow, I record a screencast at the end of the project so you can watch and   learn how to use your website</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content13 cid-t2IlDb5Ndn mbr-parallax-background" id="content13-d">
+
+  <div id="particles-js"></div>
+  
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(250, 250, 250);"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-8">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6">
+                        <ul class="list mbr-fonts-style display-4">
+                            <li>Web flow Development
+</li><li>Webflow CMS Customization
+</li><li>Sketch to web flow
+</li><li>Figma to web flow
+</li><li>PSD to web flow</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <ul class="list mbr-fonts-style display-4">
+                            <li>SEO Audit
+</li><li>Bug Fixing
+</li><li>Maintenance
+</li><li>Ongoing Support
+</li><li>Mobile Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image1 cid-t2IbhngwI1 mbr-parallax-background" id="image1-6">
+
+  <div id="particles-js"></div>
+
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(250, 250, 250);">
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5">
+                <div class="image-wrapper">
+                    <img style="border-radius: 10px;
+    box-shadow: 0px 0px 17px black;
+    border: 1px solid #b1b1b1;" src="assets/images/zbaylzi3lb2jpixr1epr.png" alt="Image">
+                    
+                </div>
+            </div>
+            <div class="col-12 col-lg">
+                <div class="text-wrapper">
+                    <h3 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Web Design</strong></h3>
+                    <p class="mbr-text mbr-fonts-style display-7"><strong>Uncovering hidden problems and solving them in a beautiful way with web design</strong><br><br>I work closely with each client, establishing what your goals and values are as a brand, what you want your business to achieve and where you fit in your industry.
+<br>
+<br>Whether your goal is to increase sign ups, duration on your site or promote a particular part of your business, I can help as a freelance web designer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content13 cid-t2IlE4LUC4 mbr-parallax-background" id="content13-e">
+
+  <div id="particles-js"></div>
+  
+    <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(250, 250, 250);"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-8">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6">
+                        <ul class="list mbr-fonts-style display-7">
+                            <li>Website Design
+</li><li>Landing Page Design&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <ul class="list mbr-fonts-style display-7">
+                            <li>UI Design
+</li><li>UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="form1 cid-t2IgaTZ1Al mbr-fullscreen mbr-parallax-background" id="form1-a">
+
+    <div id="particles-js"></div>
+
+    <div id="contacts" class="mbr-overlay" style="opacity: 0.9; background-color: rgb(250, 250, 250);"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="h1MB/AgrF9BGWxlYknZ1zSQJxLjva1++nxg8yAt0RIR1r510TBf+Y1j53FqfTf7NptK0DovyJ6MmuaYu+jFipf7cygmy89xRl4KISVaTwjkhJRa8PRPYUABxu/qCaRCe">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
+                        </div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-12">
+                            <h1 class="mbr-section-title mb-4 mbr-fonts-style align-center display-2"><strong>Do you want a new website that looks&nbsp;</strong><strong>good and converts well?</strong></h1>
+                        </div>
+                        <div class="col-12">
+                            <p class="mbr-text mbr-fonts-style mb-5 align-center display-7">If you have a project in mind or are simply <br>interested in finding out more, please fill the form below and let’s get things moving.</p>
+                        </div>
+                        <div style="  resize: both;" class="col-md col-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="Name" class="form-control" id="name-form1-a">
+                        </div>
+                        <div style="  resize: both;" class="col-md col-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="Email" data-form-field="Email" class="form-control" id="email-form1-a">
+                        </div>
+                        <div class="mbr-section-btn col-12 col-md-auto"><button type="submit" class="btn btn-white display-4">Sumbit</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content14 cid-t2Ip87v0yy mbr-parallax-background" id="content14-h">
+    
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                    
+<div id="particles-js"></div>
+  
+                <ul class="list mbr-fonts-style display-7">
+                    <li><strong>© Copyright 2022 Nikicha Cyber </strong>- All Rights Reserved.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <a href="https://mobiri.se/2747063"></a>
+    <a href="https://mobirise.com/website-design-software.html"></a>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="assets/parallax/jarallax.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/ytplayer/index.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/theme/js/script.js"></script>  
+<script src="assets/formoid/formoid.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/simple-scrollbar.js"></script>
+  
+<script>
+  particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 355,
+      "density": {
+        "enable": true,
+        "value_area": 789.1476416322727
+      }
+    },
+    "color": {
+      "value": "#232323"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 5,
+        "size_min": 0,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 4,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 83.91608391608392,
+        "size": 1,
+        "duration": 3,
+        "opacity": 1,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+let scrollDiv = document.querySelector(".area");
+SimpleScrollbar.initEl(scrollDiv);
+
+</script>
+ 
+  <input name="animation" type="hidden">
+  </body>
+</html>
